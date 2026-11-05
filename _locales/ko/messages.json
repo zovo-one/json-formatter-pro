@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON 및 API 응답을 즉시 포맷하고 검증하세요. 구문 강조, 트리 뷰, 다크 모드. 데이터가 브라우저를 떠나지 않습니다.",
+    "description": "Extension description for store listing"
+  }
+}

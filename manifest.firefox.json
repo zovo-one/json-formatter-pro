@@ -1,0 +1,68 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_extensionName__",
+    "version": "1.0.1",
+    "description": "__MSG_extensionDescription__",
+    "default_locale": "en",
+    "author": "Zovo (https://zovo.one)",
+    "homepage_url": "https://zovo.one/json-formatter-pro",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "json-formatter-pro@zovo.one",
+            "strict_min_version": "109.0"
+        }
+    },
+    "icons": {
+        "16": "assets/icons/icon-16.png",
+        "32": "assets/icons/icon-32.png",
+        "48": "assets/icons/icon-48.png",
+        "128": "assets/icons/icon-128.png"
+    },
+    "action": {
+        "default_popup": "src/popup/index.html",
+        "default_icon": {
+            "16": "assets/icons/icon-16.png",
+            "32": "assets/icons/icon-32.png"
+        },
+        "default_title": "JSON Formatter Pro"
+    },
+    "permissions": [
+        "storage",
+        "clipboardWrite",
+        "clipboardRead",
+        "activeTab",
+        "contextMenus",
+        "scripting",
+        "alarms"
+    ],
+    "background": {
+        "scripts": [
+            "src/background/service-worker.js"
+        ],
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content/json-detector.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'none'"
+    }
+}

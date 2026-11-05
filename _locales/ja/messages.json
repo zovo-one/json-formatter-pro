@@ -1,0 +1,106 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSONとAPIレスポンスを自動フォーマット＆検証。シンタックスハイライト、ツリービュー、ダークモード。データはブラウザから外に出ません。",
+    "description": "Extension description for store listing"
+  },
+  "popupTitle": {
+    "message": "JSON Formatter Pro",
+    "description": "Popup header title"
+  },
+  "tabFormat": {
+    "message": "フォーマット",
+    "description": "Format tab label"
+  },
+  "tabTree": {
+    "message": "ツリー",
+    "description": "Tree view tab label"
+  },
+  "tabConvert": {
+    "message": "変換",
+    "description": "Convert tab label"
+  },
+  "tabDiff": {
+    "message": "比較",
+    "description": "Diff comparison tab label"
+  },
+  "buttonFormat": {
+    "message": "フォーマット",
+    "description": "Format button text"
+  },
+  "buttonMinify": {
+    "message": "圧縮",
+    "description": "Minify button text"
+  },
+  "buttonCopy": {
+    "message": "コピー",
+    "description": "Copy to clipboard button"
+  },
+  "buttonClear": {
+    "message": "クリア",
+    "description": "Clear input button"
+  },
+  "buttonPaste": {
+    "message": "貼り付け",
+    "description": "Paste from clipboard button"
+  },
+  "buttonValidate": {
+    "message": "検証",
+    "description": "Validate JSON button"
+  },
+  "statusValid": {
+    "message": "有効なJSON",
+    "description": "Status when JSON is valid"
+  },
+  "statusInvalid": {
+    "message": "無効なJSON",
+    "description": "Status when JSON is invalid"
+  },
+  "statusCopied": {
+    "message": "コピーしました",
+    "description": "Confirmation after copy"
+  },
+  "settingsTitle": {
+    "message": "設定",
+    "description": "Settings section title"
+  },
+  "settingsTheme": {
+    "message": "テーマ",
+    "description": "Theme setting label"
+  },
+  "settingsDark": {
+    "message": "ダーク",
+    "description": "Dark theme option"
+  },
+  "settingsLight": {
+    "message": "ライト",
+    "description": "Light theme option"
+  },
+  "upgradeTitle": {
+    "message": "Proにアップグレード",
+    "description": "Upgrade prompt title"
+  },
+  "upgradeButton": {
+    "message": "Proを入手",
+    "description": "Upgrade button text"
+  },
+  "onboardingWelcome": {
+    "message": "JSON Formatter Proへようこそ",
+    "description": "Onboarding welcome title"
+  },
+  "onboardingNext": {
+    "message": "次へ",
+    "description": "Next button in onboarding"
+  },
+  "onboardingFinish": {
+    "message": "始める",
+    "description": "Finish onboarding button"
+  },
+  "footerPowered": {
+    "message": "Powered by Zovo",
+    "description": "Footer attribution"
+  }
+}

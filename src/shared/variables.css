@@ -1,0 +1,319 @@
+/**
+ * JSON Formatter Pro - Design System Variables
+ * Dark-mode-first, code editor aesthetic with Zovo branding
+ * 
+ * @author Zovo (https://zovo.one)
+ */
+
+:root {
+    /* =========================
+     ZOVO BRAND COLORS
+     ========================= */
+    --zovo-primary: #7C3AED;
+    --zovo-primary-hover: #6D28D9;
+    --zovo-primary-light: #EDE9FE;
+    --zovo-primary-glow: rgba(124, 58, 237, 0.4);
+
+    /* =========================
+     BACKGROUND COLORS
+     Deep blacks for code editor feel
+     ========================= */
+    --bg-primary: #0a0a0b;
+    --bg-secondary: #111113;
+    --bg-tertiary: #18181b;
+    --bg-elevated: #1f1f23;
+    --bg-hover: #27272a;
+    --bg-active: #2d2d30;
+
+    /* =========================
+     BORDER COLORS
+     ========================= */
+    --border-subtle: #27272a;
+    --border-default: #3f3f46;
+    --border-strong: #52525b;
+    --border-focus: var(--zovo-primary);
+
+    /* =========================
+     TEXT COLORS
+     ========================= */
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --text-disabled: #52525b;
+    --text-inverse: #0a0a0b;
+
+    /* =========================
+     SEMANTIC COLORS
+     ========================= */
+    --success: #10B981;
+    --success-muted: rgba(16, 185, 129, 0.15);
+    --success-text: #34d399;
+
+    --warning: #F59E0B;
+    --warning-muted: rgba(245, 158, 11, 0.15);
+    --warning-text: #fbbf24;
+
+    --error: #EF4444;
+    --error-muted: rgba(239, 68, 68, 0.15);
+    --error-text: #f87171;
+
+    --info: #3B82F6;
+    --info-muted: rgba(59, 130, 246, 0.15);
+    --info-text: #60a5fa;
+
+    /* =========================
+     SYNTAX HIGHLIGHTING
+     Inspired by popular dark themes
+     ========================= */
+    --syntax-key: #818cf8;
+    /* Indigo - object keys */
+    --syntax-string: #34d399;
+    /* Emerald - strings */
+    --syntax-number: #fbbf24;
+    /* Amber - numbers */
+    --syntax-boolean: #f472b6;
+    /* Pink - booleans */
+    --syntax-null: #71717a;
+    /* Gray - null */
+    --syntax-bracket: #a1a1aa;
+    /* Light gray - brackets */
+    --syntax-colon: #6b7280;
+    /* Dim gray - colons, commas */
+
+    /* =========================
+     TYPOGRAPHY
+     ========================= */
+    --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, monospace;
+
+    /* Type scale */
+    --text-xs: 10px;
+    --text-sm: 11px;
+    --text-base: 12px;
+    --text-md: 13px;
+    --text-lg: 14px;
+    --text-xl: 16px;
+    --text-2xl: 18px;
+    --text-3xl: 24px;
+
+    /* Weights */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Line heights */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-code: 1.7;
+
+    /* =========================
+     SPACING
+     ========================= */
+    --space-0: 0;
+    --space-px: 1px;
+    --space-0-5: 2px;
+    --space-1: 4px;
+    --space-1-5: 6px;
+    --space-2: 8px;
+    --space-2-5: 10px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+    /* =========================
+     BORDER RADIUS
+     ========================= */
+    --radius-none: 0;
+    --radius-sm: 3px;
+    --radius-md: 5px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 9999px;
+
+    /* =========================
+     SHADOWS
+     ========================= */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 20px var(--zovo-primary-glow);
+    --shadow-focus: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--zovo-primary);
+
+    /* =========================
+     TRANSITIONS
+     ========================= */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --duration-instant: 50ms;
+    --duration-fast: 100ms;
+    --duration-base: 150ms;
+    --duration-slow: 250ms;
+    --duration-slower: 400ms;
+
+    /* =========================
+     Z-INDEX LAYERS
+     ========================= */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 300;
+    --z-modal: 400;
+    --z-toast: 500;
+
+    /* =========================
+     DIMENSIONS
+     ========================= */
+    --popup-width: 520px;
+    --popup-min-height: 480px;
+    --popup-max-height: 600px;
+
+    --header-height: 44px;
+    --toolbar-height: 40px;
+    --view-toggle-height: 36px;
+    --status-height: 28px;
+    --footer-height: 32px;
+
+    --line-number-width: 44px;
+    --scrollbar-width: 8px;
+}
+
+/* =========================
+   LIGHT THEME
+   ========================= */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f4f4f5;
+    --bg-elevated: #ffffff;
+    --bg-hover: #e4e4e7;
+    --bg-active: #d4d4d8;
+
+    --border-subtle: #e4e4e7;
+    --border-default: #d4d4d8;
+    --border-strong: #a1a1aa;
+
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --text-muted: #71717a;
+    --text-disabled: #a1a1aa;
+
+    --syntax-key: #6366f1;
+    --syntax-string: #059669;
+    --syntax-number: #d97706;
+    --syntax-boolean: #db2777;
+    --syntax-null: #6b7280;
+    --syntax-bracket: #52525b;
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   BASE RESET
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-ui);
+    font-size: var(--text-md);
+    line-height: var(--leading-normal);
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* Remove default button styles */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Remove default input styles */
+input,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Links */
+a {
+    color: var(--zovo-primary);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+    color: var(--zovo-primary-hover);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-strong);
+}
+
+/* Selection */
+::selection {
+    background: var(--zovo-primary);
+    color: white;
+}
+
+/* Focus visible */
+:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+}

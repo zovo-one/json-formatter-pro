@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON un API atbilžu formatēšana un validēšana. Sintakses izcelšana, koka skats, tumšais režīms. 100% lokāli un privāti.",
+    "description": "Extension description for store listing"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON এবং API রেসপন্স স্বয়ংক্রিয়ভাবে ফরম্যাট ও যাচাই করুন। সিনট্যাক্স হাইলাইটিং, ট্রি ভিউ, ডার্ক মোড।",
+    "description": "Extension description for store listing"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Formateu i valideu JSON i respostes API al moment. Ressaltat de sintaxi, vista en arbre, mode fosc. 100% local i privat.",
+    "description": "Extension description for store listing"
+  }
+}

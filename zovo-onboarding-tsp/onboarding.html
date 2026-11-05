@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to JSON Formatter Pro</title>
+<link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
+
+<!-- top nav -->
+<nav class="topnav">
+  <div class="brand">
+    <span class="z"><b>zovo</b>.</span>
+    <span class="sep"></span>
+    <span class="prod">JSON Formatter Pro</span>
+  </div>
+  <a class="ghlink" href="https://github.com/theluckystrike" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+    Open source <span class="arr">↗</span>
+  </a>
+</nav>
+<div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="stage" id="stage">
+
+  <!-- ============ STEP 1 · THE HOOK ============ -->
+  <section class="step active" data-step="1" data-next="Show me">
+    <div class="center">
+      <span class="kicker">by Zovo · JSON that never leaves your browser</span>
+      <h1>You paste private JSON<br>into a random website<br>just to <span class="em">read</span> it.</h1>
+      <p class="lede">That formatter site now holds whatever you pasted. API keys, customer records, auth tokens, all of it
+        on someone else's server. JSON Formatter Pro formats, validates and explores the same payload right inside Chrome.
+        Nothing is uploaded, and every line is open on GitHub.</p>
+
+      <div class="timeline-card">
+        <div class="tl dead"><span class="dot"></span> Random web formatter <span class="meta">your JSON on their server &nbsp;†</span></div>
+        <div class="tl live"><span class="dot"></span> JSON Formatter Pro <span class="meta">parsed in your browser</span></div>
+      </div>
+
+      <div class="gauge" style="text-align:left">
+        <div class="row">
+          <span class="lbl">The payload you're squinting at</span>
+          <span class="val" style="font-size:15px;color:var(--text-3);white-space:normal;line-height:1.5;font-weight:500">37 keys, 4 levels deep, all on one line</span>
+        </div>
+        <pre style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.5;color:var(--text-3);white-space:pre-wrap;word-break:break-all;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px">{"user":{"id":8842,"name":"Ada Lovelace","active":true,"roles":["admin","dev"],"meta":{"seen":"2026-07-08T11:04:22Z","org":441}},"tokens":2,"scopes":["read","write","billing"],"ok":true}</pre>
+        <div class="sub">Count the brackets by eye and hope you match them. Or let the extension do it in one paste, offline.</div>
+      </div>
+
+      <div class="chips-row">
+        <span class="chip-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Open source</span>
+        <span class="chip-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Nothing leaves your browser</span>
+        <span class="chip-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Manifest V3</span>
+        <span class="chip-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No account, no tracking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 2 · INSTANT WIN ============ -->
+  <section class="step" data-step="2" data-next="Looks good, next">
+    <div class="center">
+      <span class="kicker">Watch it work · one paste</span>
+      <h2>Readable in <span class="em">one paste</span>.</h2>
+      <p class="lede">Paste your own messy JSON below, or format the sample. It parses right here on this page and
+        comes back as a color coded, collapsible tree. Nothing is uploaded, so try it with a real payload.</p>
+
+      <div class="demo">
+        <div class="demo-head">
+          <span class="demo-tag">Paste or edit, then format</span>
+          <div class="demo-btns">
+            <button class="dbtn ghost" id="demoResetBtn" type="button">Load sample</button>
+            <button class="dbtn" id="demoFormatBtn" type="button">Format</button>
+          </div>
+        </div>
+        <textarea id="demoInput" class="demo-input mono" spellcheck="false" autocomplete="off" aria-label="JSON to format"></textarea>
+        <div class="demo-status" id="demoStatus" role="status" aria-live="polite"></div>
+        <div class="demo-out mono" id="demoOutput" aria-label="Formatted output"></div>
+      </div>
+      <p class="demo-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Parsed on this page with your browser's own JSON engine. It never touches a server, ours or anyone else's.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ STEP 3 · MAKE IT YOURS ============ -->
+  <section class="step" data-step="3" data-next="Save and continue">
+    <div class="center">
+      <span class="kicker">30 seconds to set it up</span>
+      <h2>Make it <span class="em">yours</span>.</h2>
+      <p class="lede">Sensible defaults are already on. Change what you like, it takes a few seconds.</p>
+
+      <div class="setup">
+        <div class="opt">
+          <label class="opt-lbl">Indent size</label>
+          <div class="chips" id="indentChips">
+            <label class="chip"><input type="radio" name="indent" value="2" checked><span>2 spaces</span></label>
+            <label class="chip"><input type="radio" name="indent" value="4"><span>4 spaces</span></label>
+            <label class="chip"><input type="radio" name="indent" value="8"><span>8 spaces</span></label>
+            <label class="chip"><input type="radio" name="indent" value="tab"><span>Tabs</span></label>
+          </div>
+        </div>
+        <div class="opt tgls">
+          <div class="tgl-row"><span>Auto-format raw JSON pages when I open them</span>
+            <label class="tgl"><input type="checkbox" id="setAutoFormat"><span class="tgl-s"></span></label></div>
+          <div class="tgl-row"><span>Sort object keys alphabetically</span>
+            <label class="tgl"><input type="checkbox" id="setSortKeys"><span class="tgl-s"></span></label></div>
+          <div class="tgl-row"><span>Dark editor theme</span>
+            <label class="tgl"><input type="checkbox" id="setTheme" checked><span class="tgl-s"></span></label></div>
+        </div>
+      </div>
+
+      <div class="perm-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><span class="pn-ttl">Why it needs access</span>It runs on the pages you open so it can spot a raw JSON
+          response and format it in place. It reads or writes the clipboard only when you copy formatted output. Nothing
+          gets uploaded, and there's no account to sign into.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 4 · A YEAR IN THE MAKING (legitimacy + proof) ============ -->
+  <section class="step" data-step="4" data-next="See who built it">
+    <div class="center">
+      <span class="kicker">Not a weekend project</span>
+      <h2>A year in the <span class="em">making</span>.</h2>
+      <p class="lede">Roughly a year of full-time work by one senior engineer. Built in the open, tested against the messy
+        JSON that trips up quick web formatters, and shipped so your data stays local. It's a real product, not a hobby.</p>
+
+      <div class="proof-grid">
+        <div class="proof-card"><div class="pv accent">~1 yr</div><div class="pl">full-time development</div></div>
+        <div class="proof-card"><div class="pv">Free</div><div class="pl">core stays free, no account</div></div>
+        <div class="proof-card"><div class="pv mint">MV3</div><div class="pl">modern, sandboxed, no remote code</div></div>
+        <div class="proof-card"><div class="pv accent">100%</div><div class="pl">open source on GitHub (MIT)</div></div>
+        <div class="proof-card"><div class="pv">30-day</div><div class="pl">money-back on Pro, no questions</div></div>
+        <div class="proof-card"><div class="pv mint">0</div><div class="pl">bytes sent, nothing sold, ever</div></div>
+      </div>
+
+      <div class="works-note">
+        It also does the quiet things right. Raw .json pages get formatted and colored the moment you open them, the tree
+        view lets you search a five thousand line payload by key or value, and every parse happens inside the extension so
+        a customer record or an API key never touches a server. It's tested against each Chrome release, so it keeps
+        working when a bookmarked web formatter goes down or quietly changes hands.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 5 · BUILT BY SOMEONE YOU CAN REACH ============ -->
+  <section class="step" data-step="5" data-next="See what Pro includes">
+    <div class="center">
+      <span class="kicker">A person, not a faceless site</span>
+      <h2>Built by someone you can <span class="em">actually reach</span>.</h2>
+      <p class="lede">Most JSON tools are an anonymous web page you hope stays up and stays honest with your data. This one
+        has a name, an inbox, and a year of work staked on it. The name is Michael Lip, founder of Zovo.</p>
+
+      <div class="receipts">
+        <span class="receipt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Every line on GitHub, MIT licensed</span>
+        <span class="receipt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Part of the Zovo toolkit</span>
+        <span class="receipt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Support comes from the developer, not a form</span>
+      </div>
+
+      <div class="reach-cards">
+        <div class="reach-card">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" fill="none"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div class="bd"><span class="ttl">Email the person who wrote the code</span><span>A Chrome update trips up the parser, or a weird payload won't format? You don't file a ticket into a void. You reach Michael directly at <a href="mailto:support@zovo.one">support@zovo.one</a>, and bugs get read and fixed fast, often the same week.</span></div>
+        </div>
+        <div class="reach-card">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <div class="bd"><span class="ttl">You shape the roadmap</span><span>Want JSON5, a JSONPath filter, or a different export? Tell him and it can land in the next build. Pro members' requests jump the queue by design, so you're steering a tool that improves every month instead of using a frozen web page.</span></div>
+        </div>
+        <div class="reach-card">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="bd"><span class="ttl">Good for both of us, long term</span><span>Paying keeps a named developer full-time on the tool you rely on, so it never becomes another abandoned extension for sale. You get software that keeps getting better. He gets to keep making it.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 6 · FOUNDER + PRICING ============ -->
+  <section class="step" data-step="6">
+    <div class="center">
+      <span class="kicker">Zovo Pro · built by one accountable developer</span>
+      <h2>The whole JSON toolkit. <span class="em">Local.</span></h2>
+      <p class="lede">Free formats, validates and explores every payload. Pro adds the conversions, schema checks and diffs
+        you'd otherwise open three more websites for, still without a byte leaving your browser.</p>
+
+      <div class="founder">
+        <img class="pic" src="assets/michael-lip.png" alt="Michael Lip">
+        <div class="body">
+          <div class="nm">Michael Lip
+            <svg class="verified" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 1.8 3-.2 1 2.8 2.6 1.4-.6 2.9 1.4 2.6-2 2.2.2 3-2.8.9-1.4 2.6-2.9-.7-2.5 1.6-2.5-1.6-2.9.7L6.9 21l-2.8-.9.2-3-2-2.2 1.4-2.6-.6-2.9L5.7 6l1-2.8 3 .2z"/><path d="M10.5 13.5l-2-2L7 13l3.5 3.5L17 10l-1.5-1.5z" fill="#05030f"/></svg>
+            <span class="role">· founder, Zovo</span>
+          </div>
+          <p class="cred">Solo developer building the Zovo toolkit. Every line of this extension is on GitHub, and support
+            comes straight from me. No support queue, no outsourced inbox.</p>
+          <div class="socials">
+            <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">theluckystrike</a>
+            <a href="https://x.com/_alphashark_" target="_blank" rel="noopener">@_alphashark_</a>
+            <a href="mailto:support@zovo.one">Email me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <div class="pcard">
+          <div class="seg" id="planSeg">
+            <button data-plan="monthly" class="on">Monthly</button>
+            <button data-plan="lifetime">Lifetime <span class="flag">best value</span></button>
+          </div>
+          <div class="price" id="priceRow">
+            <span class="amt" id="priceAmt">$4.99</span><span class="per" id="pricePer">/ month</span>
+          </div>
+          <div class="price-sub" id="priceSub">7-day free trial, no card to start</div>
+
+          <div class="pfeat">
+            <div class="pf"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/><polyline points="17 14 20 17 17 20"/></svg></div><div class="tx"><span class="ttl">YAML and CSV export</span><span>Turn any payload into YAML or a spreadsheet-ready CSV in one click.</span></div></div>
+            <div class="pf"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><div class="tx"><span class="ttl">Schema validation</span><span>Check JSON against a schema and catch a bad field before it ships.</span></div></div>
+            <div class="pf"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/><line x1="18" y1="5" x2="18" y2="9"/></svg></div><div class="tx"><span class="ttl">Diff and compare</span><span>Drop two objects side by side and see exactly what changed.</span></div></div>
+            <div class="pf"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></div><div class="tx"><span class="ttl">Unlimited history and snippets</span><span>Every payload you format stays saved and searchable, not just the last few.</span></div></div>
+          </div>
+
+          <div class="reassure-row">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><span id="reassure1">No card to start</span></span>
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Cancel anytime</span>
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>30-day money-back</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activate">
+        <button class="act-toggle" id="actToggle" type="button" aria-expanded="false" aria-controls="actPanel">Already paid? Enter your key</button>
+        <div class="act-panel" id="actPanel" hidden>
+          <div class="act-row">
+            <input id="licKey" class="act-input mono" type="text" autocomplete="off" spellcheck="false" placeholder="ZOVO-XXXX-XXXX-XXXX-XXXX" aria-label="License key">
+            <button class="act-btn" id="actBtn" type="button">Activate</button>
+          </div>
+          <p class="act-status" id="actStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <button class="skip-link" id="skipPro" type="button">Maybe later, keep the free version</button>
+
+      <div class="faq" id="faq">
+        <div class="faq-item"><button class="faq-q">Does my JSON ever leave my browser?<span class="pm">+</span></button>
+          <div class="faq-a"><p>No. Every payload is parsed locally by the extension. There are no analytics, no servers, and nothing to upload. That's the whole reason it exists.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What happens when the trial ends?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Nothing you rely on disappears. Formatting, validating and the tree view stay free forever, and Pro just keeps YAML and CSV export, schema validation, diff, and unlimited history switched on.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Can I cancel?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Anytime, in one click. Lifetime is a single $99 with a 30-day money-back guarantee, so there's no risk in trying it.</p></div></div>
+      </div>
+
+      <div class="social-proof">Free core stays free. Pro is one payment, backed by a 30-day money-back guarantee, and one license opens every Zovo tool.</div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 7 · ALL SET + FOUNDER SIGN-OFF ============ -->
+  <section class="step" data-step="7" data-next="Start formatting">
+    <div class="center">
+      <div class="done-ic"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <span class="kicker mint">Ready when you are</span>
+      <h2>You're all set.</h2>
+      <p class="lede">JSON Formatter Pro is installed and waiting in your toolbar. Paste a payload, open a .json page,
+        or right-click any selected JSON, and it formats in place without sending a thing.</p>
+
+      <div class="pin">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+        Tip. Click the puzzle icon in Chrome's toolbar and pin JSON Formatter Pro so it's one click away.
+      </div>
+
+      <div class="sc-title">Handy shortcuts</div>
+      <div class="shortcuts">
+        <div class="sc"><span class="keys"><kbd>Ctrl</kbd><kbd>⇧</kbd><kbd>F</kbd></span>Format the JSON in the popup</div>
+        <div class="sc"><span class="keys"><kbd>⌘</kbd><kbd>⇧</kbd><kbd>F</kbd></span>Format on macOS</div>
+        <div class="sc"><span class="keys"><kbd>Tab</kbd></span>Insert an indent in the editor</div>
+        <div class="sc"><span class="keys"><kbd>right-click</kbd></span>Format, validate or minify a selection</div>
+      </div>
+
+      <div class="toolkit">
+        <div class="toolkit-head"><span class="t">Part of the Zovo toolkit</span>
+          <a href="https://www.zovo.one" target="_blank" rel="noopener">All extensions ↗</a></div>
+        <div class="tk-item"><div><div class="tn">BeLikeNative</div><div class="td">Rewrite any text, on any site</div></div><span class="meta">↗</span></div>
+        <div class="tk-item"><div><div class="tn">Join Zovo · shape the roadmap</div><div class="td">Vote on what gets built next, and members get every extension</div></div><span class="meta">↗</span></div>
+      </div>
+
+      <!-- founder sign-off -->
+      <div class="signoff">
+        <div class="signoff-head">
+          <img class="pic" src="assets/michael-lip.png" alt="Michael Lip">
+          <div class="who">
+            <div class="nm">Michael Lip
+              <svg class="verified" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 1.8 3-.2 1 2.8 2.6 1.4-.6 2.9 1.4 2.6-2 2.2.2 3-2.8.9-1.4 2.6-2.9-.7-2.5 1.6-2.5-1.6-2.9.7L6.9 21l-2.8-.9.2-3-2-2.2 1.4-2.6-.6-2.9L5.7 6l1-2.8 3 .2z"/><path d="M10.5 13.5l-2-2L7 13l3.5 3.5L17 10l-1.5-1.5z" fill="#05030f"/></svg>
+            </div>
+            <div class="role">a note from the person who built this</div>
+          </div>
+        </div>
+        <p>I built this because I kept catching myself doing the risky thing. Pasting a live API response into whatever
+          formatter ranked first on Google, just to read it. That payload had tokens and customer data in it, and it went
+          straight to a stranger's server. So I made the version I'd trust on my own machine. It parses everything
+          locally, sends nothing, and every line sits on GitHub where you can read it yourself.</p>
+        <p>If a Chrome update breaks something, or you wish it did one more thing, tell me. Every bug and request is read
+          and fixed by the same person who wrote the code. That's the deal. You use it, I keep making it better.</p>
+        <div class="sig">Michael</div>
+        <div class="reach">
+          <a href="mailto:support@zovo.one">support@zovo.one</a>
+          <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github.com/theluckystrike</a>
+          <a href="https://x.com/_alphashark_" target="_blank" rel="noopener">@_alphashark_</a>
+        </div>
+        <p class="ps">P.S. Lifetime is $99 once and it opens every Zovo tool I ever ship, not just this one. Whichever you
+          pick, thank you for trusting a real developer over a faceless site. Now go paste that payload the safe way.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- bottom nav -->
+<div class="navbar">
+  <div class="navbar-in">
+    <button class="nbtn back" id="backBtn" hidden>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+    </button>
+    <div class="indicator">
+      <span class="counter" id="counter">01 / 07</span>
+      <div class="dots" id="dots">
+        <button class="dot active" data-step="1" aria-label="Step 1"></button>
+        <button class="dot" data-step="2" aria-label="Step 2"></button>
+        <button class="dot" data-step="3" aria-label="Step 3"></button>
+        <button class="dot" data-step="4" aria-label="Step 4"></button>
+        <button class="dot" data-step="5" aria-label="Step 5"></button>
+        <button class="dot" data-step="6" aria-label="Step 6"></button>
+        <button class="dot" data-step="7" aria-label="Step 7"></button>
+      </div>
+    </div>
+    <button class="nbtn next" id="nextBtn">
+      <span id="nextLabel">Show me</span>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="onboarding.js"></script>
+</body>
+</html>

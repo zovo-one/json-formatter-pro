@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Định dạng và xác thực JSON & phản hồi API ngay lập tức. Tô sáng cú pháp, chế độ cây, chế độ tối. Dữ liệu không rời trình duyệt.",
+    "description": "Extension description for store listing"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Fomati na uthibitishe JSON na majibu ya API papo hapo. Kuangazia sintaksia, mwonekano wa mti, hali ya giza. 100% faragha.",
+    "description": "Extension description for store listing"
+  }
+}

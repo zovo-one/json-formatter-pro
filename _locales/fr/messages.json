@@ -1,0 +1,148 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Formatez et validez JSON & réponses API instantanément. Coloration syntaxique, arborescence, mode sombre. 100% local et privé.",
+    "description": "Extension description for store listing"
+  },
+  "popupTitle": {
+    "message": "JSON Formatter Pro",
+    "description": "Popup header title"
+  },
+  "tabFormat": {
+    "message": "Formater",
+    "description": "Format tab label"
+  },
+  "tabTree": {
+    "message": "Arbre",
+    "description": "Tree view tab label"
+  },
+  "tabConvert": {
+    "message": "Convertir",
+    "description": "Convert tab label"
+  },
+  "tabDiff": {
+    "message": "Comparer",
+    "description": "Diff comparison tab label"
+  },
+  "buttonFormat": {
+    "message": "Formater",
+    "description": "Format button text"
+  },
+  "buttonMinify": {
+    "message": "Minifier",
+    "description": "Minify button text"
+  },
+  "buttonCopy": {
+    "message": "Copier",
+    "description": "Copy to clipboard button"
+  },
+  "buttonClear": {
+    "message": "Effacer",
+    "description": "Clear input button"
+  },
+  "buttonPaste": {
+    "message": "Coller",
+    "description": "Paste from clipboard button"
+  },
+  "buttonValidate": {
+    "message": "Valider",
+    "description": "Validate JSON button"
+  },
+  "buttonCompare": {
+    "message": "Comparer",
+    "description": "Compare two JSON objects"
+  },
+  "labelInput": {
+    "message": "Collez votre JSON ici...",
+    "description": "Input placeholder"
+  },
+  "labelOutput": {
+    "message": "Le résultat formaté apparaîtra ici",
+    "description": "Output placeholder"
+  },
+  "labelIndent": {
+    "message": "Indentation",
+    "description": "Indent size label"
+  },
+  "labelSpaces": {
+    "message": "espaces",
+    "description": "Spaces unit"
+  },
+  "statusValid": {
+    "message": "JSON valide",
+    "description": "Status when JSON is valid"
+  },
+  "statusInvalid": {
+    "message": "JSON invalide",
+    "description": "Status when JSON is invalid"
+  },
+  "statusCopied": {
+    "message": "Copié !",
+    "description": "Confirmation after copy"
+  },
+  "statusCleared": {
+    "message": "Effacé",
+    "description": "Confirmation after clear"
+  },
+  "errorParsing": {
+    "message": "Erreur d'analyse JSON : $ERROR$",
+    "description": "JSON parse error message",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Token inattendu à la position 42"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "Paramètres",
+    "description": "Settings section title"
+  },
+  "settingsTheme": {
+    "message": "Thème",
+    "description": "Theme setting label"
+  },
+  "settingsDark": {
+    "message": "Sombre",
+    "description": "Dark theme option"
+  },
+  "settingsLight": {
+    "message": "Clair",
+    "description": "Light theme option"
+  },
+  "settingsAuto": {
+    "message": "Automatique",
+    "description": "Auto theme option"
+  },
+  "upgradeTitle": {
+    "message": "Passer à Pro",
+    "description": "Upgrade prompt title"
+  },
+  "upgradeButton": {
+    "message": "Obtenir Pro",
+    "description": "Upgrade button text"
+  },
+  "shareTitle": {
+    "message": "Partager JSON Formatter Pro",
+    "description": "Share modal title"
+  },
+  "onboardingWelcome": {
+    "message": "Bienvenue sur JSON Formatter Pro",
+    "description": "Onboarding welcome title"
+  },
+  "onboardingNext": {
+    "message": "Suivant",
+    "description": "Next button in onboarding"
+  },
+  "onboardingFinish": {
+    "message": "Commencer",
+    "description": "Finish onboarding button"
+  },
+  "footerPowered": {
+    "message": "Propulsé par Zovo",
+    "description": "Footer attribution"
+  }
+}

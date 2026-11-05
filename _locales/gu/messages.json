@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON અને API રિસ્પોન્સ ફોર્મેટ અને વેલિડેટ કરો. સિન્ટેક્સ હાઇલાઇટિંગ, ટ્રી વ્યૂ, ડાર્ક મોડ. 100% લોકલ અને ખાનગી.",
+    "description": "Extension description for store listing"
+  }
+}

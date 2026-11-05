@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=520">
+    <title>JSON Formatter Pro</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../shared/variables.css">
+    <link rel="stylesheet" href="../shared/zovo-brand.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div id="app" class="app">
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path
+                                d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3" />
+                        </svg>
+                    </div>
+                    <span class="logo-text">JSON Formatter</span>
+                    <span class="logo-badge">PRO</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" id="historyBtn" title="Formatting history">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                </button>
+                <button class="icon-btn" id="settingsBtn" title="Settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- ===== TOOLBAR ===== -->
+        <div class="toolbar">
+            <div class="toolbar-group">
+                <button class="tool-btn primary" id="formatBtn" title="Format JSON (Ctrl+Shift+F)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="16" y2="18" />
+                    </svg>
+                    <span>Format</span>
+                </button>
+                <button class="tool-btn" id="minifyBtn" title="Minify JSON">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                    </svg>
+                    <span>Minify</span>
+                </button>
+                <button class="tool-btn" id="validateBtn" title="Validate JSON">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <span>Validate</span>
+                </button>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <div class="toolbar-group">
+                <button class="tool-btn" id="copyBtn" title="Copy to Clipboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                    </svg>
+                </button>
+                <button class="tool-btn" id="downloadBtn" title="Download JSON">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                </button>
+                <button class="tool-btn" id="clearBtn" title="Clear Editor">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <!-- PRO FEATURES -->
+            <div class="toolbar-group">
+                <button class="tool-btn pro" id="yamlBtn" title="Convert to YAML (Pro)" data-pro="true">
+                    <span class="pro-badge">PRO</span>
+                    <span>YAML</span>
+                </button>
+                <button class="tool-btn pro" id="csvBtn" title="Export to CSV (Pro)" data-pro="true">
+                    <span class="pro-badge">PRO</span>
+                    <span>CSV</span>
+                </button>
+                <button class="tool-btn pro" id="diffBtn" title="Compare JSON (Pro)" data-pro="true">
+                    <span class="pro-badge">PRO</span>
+                    <span>Diff</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== VIEW TOGGLE ===== -->
+        <div class="view-toggle">
+            <button class="view-btn active" data-view="editor" id="editorViewBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                </svg>
+                <span>Editor</span>
+            </button>
+            <button class="view-btn" data-view="tree" id="treeViewBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+                <span>Tree</span>
+            </button>
+        </div>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main">
+            <!-- Editor View -->
+            <div class="editor-container active" id="editorContainer">
+                <div class="line-numbers" id="lineNumbers">
+                    <div class="line">1</div>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="jsonInput" class="json-editor" placeholder='Paste your JSON here...
+
+{
+  "example": "Start typing or paste JSON",
+  "features": ["format", "validate", "convert"],
+  "pro": true
+}' spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+                </div>
+            </div>
+
+            <!-- Tree View -->
+            <div class="tree-container" id="treeContainer">
+                <div class="tree-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" id="treeSearch" placeholder="Search keys or values...">
+                </div>
+                <div class="tree-view" id="treeView">
+                    <div class="tree-empty" id="treeEmpty">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3" />
+                        </svg>
+                        <p>Paste JSON to see the tree view</p>
+                    </div>
+                    <div class="tree-content" id="treeContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== STATUS BAR ===== -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-item" id="statusValid">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Ready</span>
+                </span>
+                <span class="status-item" id="statusSize">0 B</span>
+            </div>
+            <div class="status-right">
+                <span class="status-item status-stats" id="statusStats">
+                    <span class="stat" id="statKeys">0 keys</span>
+                    <span class="stat-divider">•</span>
+                    <span class="stat" id="statDepth">Depth: 0</span>
+                </span>
+                <button class="status-btn" id="indentToggle" title="Toggle indent size">
+                    2 spaces
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <a href="https://zovo.one?ref=json-formatter-pro" target="_blank" class="footer-brand">
+                <span>by</span>
+                <strong>zovo.</strong>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+            </a>
+        </footer>
+
+        <!-- ===== PRO UPGRADE MODAL ===== -->
+        <div class="modal" id="proModal" hidden>
+            <div class="modal-backdrop" id="proModalBackdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="closeProModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                <div class="modal-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                </div>
+                <h2>Everything in Pro</h2>
+                <p class="modal-subtitle">Get the full JSON toolkit</p>
+
+                <ul class="pro-features-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        JSON ↔ YAML conversion
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Export to CSV
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        JSON Schema validation
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Diff & compare
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Up to 50 saved history entries
+                    </li>
+                </ul>
+
+                <div class="pro-pricing">
+                    <span class="price">$99 once</span>
+                    <span class="period">yours for life, or $4.99/mo</span>
+                </div>
+
+                <a href="https://zovo.one/pricing?ext=json-formatter-pro&ref=json-pro-modal" target="_blank" class="btn btn-primary btn-lg">
+                    Get Pro
+                </a>
+
+                <p class="modal-note">
+                    One payment covers every Zovo Pro extension. <a href="#" id="proMaybeLater">Maybe later</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== LICENSE KEY MODAL ===== -->
+        <div class="modal" id="licenseModal" hidden>
+            <div class="modal-backdrop" id="licenseModalBackdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="closeLicenseModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                <div class="modal-icon license-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                    </svg>
+                </div>
+                <h2>Enter License Key</h2>
+                <p class="modal-subtitle">Activate your Zovo Pro subscription</p>
+
+                <div class="license-input-group">
+                    <input type="text" id="licenseKeyInput" class="license-input" placeholder="ZOVO-XXXX-XXXX-XXXX-XXXX"
+                        autocomplete="off" spellcheck="false">
+                    <div class="license-error" id="licenseError" hidden>
+                        Invalid license key. Please check and try again.
+                    </div>
+                </div>
+
+                <button id="activateLicenseBtn" class="btn btn-primary btn-lg">
+                    Activate License
+                </button>
+
+                <p class="modal-note">
+                    Don't have a license key?<br>
+                    <a href="https://zovo.one/pricing?ref=json-formatter-pro&source=license-modal" target="_blank">
+                        Get Zovo Pro →
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== SETTINGS MODAL ===== -->
+        <div class="modal" id="settingsModal" hidden>
+            <div class="modal-backdrop" id="settingsModalBackdrop"></div>
+            <div class="modal-content settings-modal-content">
+                <button class="modal-close" id="closeSettingsModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                <h2>Settings</h2>
+
+                <!-- Theme Toggle -->
+                <div class="settings-section">
+                    <div class="settings-row">
+                        <div class="settings-label">
+                            <span class="settings-title">Theme</span>
+                            <span class="settings-desc">Choose light or dark mode</span>
+                        </div>
+                        <div class="theme-toggle-group">
+                            <button class="theme-btn" id="themeLightBtn" data-theme="light">Light</button>
+                            <button class="theme-btn active" id="themeDarkBtn" data-theme="dark">Dark</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indent Size -->
+                <div class="settings-section">
+                    <div class="settings-row">
+                        <div class="settings-label">
+                            <span class="settings-title">Indent Size</span>
+                            <span class="settings-desc">Spaces per indent level</span>
+                        </div>
+                        <div class="theme-toggle-group">
+                            <button class="indent-btn" data-indent="2">2</button>
+                            <button class="indent-btn active" data-indent="4">4</button>
+                            <button class="indent-btn" data-indent="8">8</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sort Keys -->
+                <div class="settings-section">
+                    <div class="settings-row">
+                        <div class="settings-label">
+                            <span class="settings-title">Sort Keys</span>
+                            <span class="settings-desc">Alphabetically sort object keys</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="sortKeysToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Auto Paste -->
+                <div class="settings-section">
+                    <div class="settings-row">
+                        <div class="settings-label">
+                            <span class="settings-title">Auto-Paste</span>
+                            <span class="settings-desc">Paste JSON from clipboard on open</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="autoPasteToggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- License Key Section -->
+                <div class="settings-section">
+                    <div class="settings-row">
+                        <div class="settings-label">
+                            <span class="settings-title">Zovo Pro</span>
+                            <span class="settings-desc" id="proStatusText">Not activated</span>
+                        </div>
+                        <button class="btn btn-secondary" id="manageLicenseBtn">
+                            Enter Key
+                        </button>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="settings-footer">
+                    <p>JSON Formatter Pro v1.0.6</p>
+                    <p>Made with care by <a href="https://zovo.one?ref=json-formatter-pro&source=settings"
+                            target="_blank">Zovo</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TOAST ===== -->
+        <div class="toast" id="toast" hidden>
+            <div class="toast-icon" id="toastIcon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+            </div>
+            <span class="toast-message" id="toastMessage"></span>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../lib/json-utils.js"></script>
+    <script src="../lib/yaml-converter.js"></script>
+    <script src="../lib/csv-converter.js"></script>
+    <script src="../lib/schema-validator.js"></script>
+    <script src="../lib/api.js"></script>
+    <script src="../lib/storage.js"></script>
+    <script src="../shared/analytics.js"></script>
+    <script src="../shared/retention.js"></script>
+    <script src="../shared/catalog.js"></script>
+    <script src="../../membership-state.js"></script>
+    <script src="history-view.js"></script>
+    <link rel="stylesheet" href="history-view.css">
+    <script src="popup.js"></script>
+    <script src="../../membership-entry.js" defer></script>
+    <link rel="stylesheet" href="../../membership-entry.css">
+<script src="../../zovo150k.js"></script>
+<script src="../../zovo-whats-new/config.js"></script><script src="../../zovo-whats-new/zovo-cards.js" data-zovo-mount="popup" data-zovo-skip-if=".ztm-card, #zovo-rate-prompt, .zrp-card, #zovo-membership-entry"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "自动格式化和验证 JSON 及 API 响应。语法高亮、树形视图、深色模式。数据不会离开您的浏览器。",
+    "description": "Extension description for store listing"
+  },
+  "popupTitle": {
+    "message": "JSON Formatter Pro",
+    "description": "Popup header title"
+  },
+  "tabFormat": {
+    "message": "格式化",
+    "description": "Format tab label"
+  },
+  "tabTree": {
+    "message": "树形",
+    "description": "Tree view tab label"
+  },
+  "tabConvert": {
+    "message": "转换",
+    "description": "Convert tab label"
+  },
+  "tabDiff": {
+    "message": "对比",
+    "description": "Diff comparison tab label"
+  },
+  "buttonFormat": {
+    "message": "格式化",
+    "description": "Format button text"
+  },
+  "buttonMinify": {
+    "message": "压缩",
+    "description": "Minify button text"
+  },
+  "buttonCopy": {
+    "message": "复制",
+    "description": "Copy to clipboard button"
+  },
+  "buttonClear": {
+    "message": "清除",
+    "description": "Clear input button"
+  },
+  "buttonPaste": {
+    "message": "粘贴",
+    "description": "Paste from clipboard button"
+  },
+  "buttonValidate": {
+    "message": "验证",
+    "description": "Validate JSON button"
+  },
+  "statusValid": {
+    "message": "有效的 JSON",
+    "description": "Status when JSON is valid"
+  },
+  "statusInvalid": {
+    "message": "无效的 JSON",
+    "description": "Status when JSON is invalid"
+  },
+  "statusCopied": {
+    "message": "已复制！",
+    "description": "Confirmation after copy"
+  },
+  "settingsTitle": {
+    "message": "设置",
+    "description": "Settings section title"
+  },
+  "settingsTheme": {
+    "message": "主题",
+    "description": "Theme setting label"
+  },
+  "settingsDark": {
+    "message": "深色",
+    "description": "Dark theme option"
+  },
+  "settingsLight": {
+    "message": "浅色",
+    "description": "Light theme option"
+  },
+  "upgradeTitle": {
+    "message": "升级到 Pro",
+    "description": "Upgrade prompt title"
+  },
+  "upgradeButton": {
+    "message": "获取 Pro",
+    "description": "Upgrade button text"
+  },
+  "onboardingWelcome": {
+    "message": "欢迎使用 JSON Formatter Pro",
+    "description": "Onboarding welcome title"
+  },
+  "onboardingNext": {
+    "message": "下一步",
+    "description": "Next button in onboarding"
+  },
+  "onboardingFinish": {
+    "message": "开始使用",
+    "description": "Finish onboarding button"
+  },
+  "footerPowered": {
+    "message": "由 Zovo 提供支持",
+    "description": "Footer attribution"
+  }
+}

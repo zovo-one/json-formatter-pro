@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "自動格式化和驗證 JSON 及 API 回應。語法高亮、樹狀檢視、深色模式。資料不會離開您的瀏覽器。",
+    "description": "Extension description for store listing"
+  }
+}

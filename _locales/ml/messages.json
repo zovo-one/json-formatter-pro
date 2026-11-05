@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON, API പ്രതികരണങ്ങൾ ഫോർമാറ്റ് ചെയ്ത് സാധൂകരിക്കുക. സിന്റാക്സ് ഹൈലൈറ്റിംഗ്, ട്രീ വ്യൂ, ഡാർക്ക് മോഡ്.",
+    "description": "Extension description for store listing"
+  }
+}

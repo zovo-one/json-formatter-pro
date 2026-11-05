@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON மற்றும் API பதில்களை உடனடியாக வடிவமைத்து சரிபார்க்கவும். சிண்டாக்ஸ் ஹைலைட்டிங், ட்ரீ வியூ, டார்க் மோட்.",
+    "description": "Extension description for store listing"
+  }
+}

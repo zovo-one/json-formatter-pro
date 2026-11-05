@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An update for early users · JSON Formatter Pro</title>
+<style>
+:root{
+  --bg:#0a0a0f;--surface:#14141b;--surface-2:#1a1a24;--border:rgba(255,255,255,.07);--border-strong:rgba(255,255,255,.12);
+  --text:#f4f4f5;--text-2:#a1a1aa;--text-3:#71717a;
+  --purple:#7c3aed;--purple-2:#a371f7;--green:#22c55e;--green-2:#4ade80;--amber:#f59e0b;--blue:#60a5fa;
+  --grad:linear-gradient(135deg,#7c3aed 0%,#a371f7 100%);--purple-glow:rgba(124,58,237,.35);
+  --shadow-purple:0 16px 50px -12px var(--purple-glow);--r-lg:20px;--r-md:14px;--r-sm:10px;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text-2);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.bgfx{position:fixed;inset:0;z-index:0;background:radial-gradient(60% 45% at 50% -8%,rgba(124,58,237,.18),transparent 60%),radial-gradient(40% 35% at 88% 12%,rgba(34,197,94,.06),transparent 60%),var(--bg)}
+.wrap{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:56px 24px 80px}
+a{color:var(--purple-2);text-decoration:none}
+.logo{width:64px;height:64px;border-radius:18px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#fff;letter-spacing:-.04em;box-shadow:var(--shadow-purple);margin:0 auto 22px}
+.center{text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);padding:6px 13px;border-radius:100px;margin-bottom:20px}
+h1{font-size:clamp(30px,5.5vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.08;color:#fff}
+h1 .a{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lede{font-size:17px;color:var(--text-2);max-width:560px;margin:18px auto 0}
+.lede strong{color:var(--text);font-weight:600}
+.reassure-top{display:flex;gap:9px;align-items:center;justify-content:center;margin:22px auto 0;font-size:14px;color:var(--green-2);background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.24);padding:11px 18px;border-radius:100px;max-width:max-content}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:34px 0}
+.col{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px 22px}
+.col.free{border-left:3px solid var(--green)}
+.col.pro{border-left:3px solid var(--purple)}
+.col h3{font-size:14px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.col li{position:relative;padding-left:24px;font-size:14px;color:var(--text-2);line-height:1.4}
+.col.free li::before{content:"\2713";position:absolute;left:0;color:var(--green-2);font-weight:900}
+.col.pro li::before{content:"\2605";position:absolute;left:0;color:var(--purple-2);font-weight:900;font-size:12px;top:2px}
+
+.founder{background:linear-gradient(180deg,rgba(124,58,237,.14),rgba(20,20,27,.6));border:1px solid rgba(124,58,237,.4);border-radius:var(--r-lg);padding:30px 28px;margin:30px 0;text-align:center;box-shadow:var(--shadow-purple);position:relative;overflow:hidden}
+.founder::before{content:"";position:absolute;top:-40%;right:-15%;width:260px;height:260px;background:radial-gradient(circle,var(--purple-glow),transparent 70%);pointer-events:none}
+.founder .flag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#0a0a0f;background:linear-gradient(135deg,#fbbf24,#f59e0b);padding:5px 12px;border-radius:100px;margin-bottom:14px}
+.founder h2{font-size:24px;font-weight:900;color:#fff;letter-spacing:-.02em;margin-bottom:6px}
+.founder .price{display:flex;align-items:baseline;gap:10px;justify-content:center;margin:16px 0 6px}
+.founder .price .amt{font-size:48px;font-weight:900;color:#fff;letter-spacing:-.03em}
+.founder .price .per{font-size:15px;color:var(--text-2);font-weight:600}
+.founder .pnote{font-size:13.5px;color:var(--text-2);margin-bottom:20px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-size:16px;font-weight:800;color:#fff;background:var(--grad);border:none;border-radius:var(--r-sm);padding:16px 34px;cursor:pointer;box-shadow:var(--shadow-purple);transition:transform .18s var(--ease);text-decoration:none}
+.cta:hover{transform:translateY(-2px);color:#fff}
+.cta.ghost{background:transparent;border:1px solid var(--border-strong);color:var(--text-2);box-shadow:none;font-weight:700}
+.altrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.lifetime-line{font-size:13.5px;color:var(--text-3);margin-top:16px;line-height:1.6}
+.lifetime-line a{font-weight:700}
+
+.why{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:0 var(--r-md) var(--r-md) 0;padding:20px 24px;margin:28px 0}
+.why h3{font-size:15px;font-weight:800;color:#fff;margin-bottom:8px}
+.why p{font-size:14.5px;color:var(--text-2);line-height:1.6;margin:8px 0}
+.why strong{color:var(--text)}
+.timeline{font-size:13.5px;color:var(--text-3);text-align:center;margin-top:8px}
+.foot{margin-top:34px;text-align:center;font-size:13px;color:var(--text-3)}
+.foot a{font-weight:600}
+@media(max-width:600px){.split{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bgfx"></div>
+<div class="wrap">
+
+  <div class="center">
+    <div class="logo">JF</div>
+    <span class="kicker">A note for our early users</span>
+    <h1>JSON Formatter Pro is<br><span class="a">growing up</span>.</h1>
+    <p class="lede">Thanks for using JSON Formatter Pro. To keep it fast, safe and actually maintained,
+      the two advanced export tools are becoming paid. That is how a one-person studio keeps the lights on.
+      Here is exactly what changes for you, and what stays free.</p>
+    <div class="reassure-top">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+      Nothing changes for how you use it today. Your settings and themes stay exactly as they are.
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="col free">
+      <h3><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Always free. For good</h3>
+      <ul>
+        <li>Format and beautify JSON, unlimited</li>
+        <li>Minify for production</li>
+        <li>Validate with the exact error line</li>
+        <li>Tree view explorer and search</li>
+        <li>Copy, download, dark and light themes</li>
+      </ul>
+    </div>
+    <div class="col pro">
+      <h3><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a371f7" stroke-width="2.4"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg> Now Pro</h3>
+      <ul>
+        <li>Convert JSON to YAML in one click</li>
+        <li>Export JSON arrays to CSV for spreadsheets</li>
+        <li>Priority support, straight from the developer</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="founder">
+    <span class="flag">A thank-you for early users</span>
+    <h2>Keep the Pro tools</h2>
+    <div class="price"><span class="amt">$4.99</span><span class="per">a month</span></div>
+    <div class="pnote">Turns on the built-in YAML and CSV export tools plus priority support. Cancel anytime.</div>
+    <a class="cta" id="getProBtn" href="https://zovo.one/pricing?plan=pro&amp;src=whatsnew&amp;ext=json-formatter-pro" target="_blank" rel="noopener">Get Pro</a>
+    <div class="altrow">
+      <a class="cta ghost" id="laterBtn" href="#">Keep using the free version</a>
+    </div>
+    <div class="lifetime-line">Rather pay once? Get Lifetime for $99 as one payment and get every Zovo tool for good.
+      <a id="getLifetimeBtn" href="https://zovo.one/pricing?plan=lifetime&amp;src=whatsnew&amp;ext=json-formatter-pro" target="_blank" rel="noopener">See Lifetime</a></div>
+  </div>
+
+  <div class="why">
+    <h3>Why this is happening</h3>
+    <p>JSON Formatter Pro is built and maintained by one developer as part of zovo.one, a small
+      independent studio. There are no investors and no ads, and your JSON never leaves your machine. Every
+      tool runs locally in your browser, including the Pro ones. What Pro pays for is the ongoing work,
+      and every bug report is read and fixed by the same person who wrote the code.</p>
+    <p>Charging for the advanced tools is simply how the work continues, and how the core stays free and
+      here in two years. Thank you for being part of it.</p>
+  </div>
+
+  <p class="timeline">The free tier keeps working today. The Pro tools turn on the moment you upgrade.</p>
+
+  <div class="foot">
+    Questions? <a href="mailto:support@zovo.one">support@zovo.one</a>. A real person writes back ·
+    <a href="https://www.zovo.one" target="_blank" rel="noopener">zovo.one</a>
+  </div>
+</div>
+
+<script src="whats-new.js"></script>
+<script src="zovo150k.js"></script>
+</body>
+</html>

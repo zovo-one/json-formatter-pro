@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON és API válaszok formázása és validálása. Szintaxis kiemelés, fa nézet, sötét mód. 100% helyi és privát.",
+    "description": "Extension description for store listing"
+  }
+}

@@ -1,0 +1,7 @@
+(() => {
+'use strict';
+const KEY='zovo_json_membership_v1',PRIOR='zovo_json_prior_member_v1',LICENSE_KEYS=['isPro','licenseKey','proExpiresAt','zovoLicense','subscription'],campaign='founder-membership-2026-09';let observed=false;
+async function read(){const [local,sync]=await Promise.all([chrome.storage.local.get([KEY,PRIOR,...LICENSE_KEYS]),chrome.storage.sync.get(LICENSE_KEYS)]);const n=local[KEY];let unknown=false;for(const d of [local,sync]){observed=observed||Boolean(d.isPro)||Boolean(d.licenseKey)||Boolean(d.proExpiresAt)||Boolean(d.zovoLicense)||Boolean(d.subscription);if(d.isPro!==undefined&&typeof d.isPro!=='boolean'||d.licenseKey!=null&&typeof d.licenseKey!=='string'||d.proExpiresAt!=null&&(typeof d.proExpiresAt!=='number'||!Number.isFinite(d.proExpiresAt)||d.proExpiresAt<0))unknown=true}observed=observed||local[PRIOR]===true;if(observed&&local[PRIOR]!==true)await chrome.storage.local.set({[PRIOR]:true});if(observed)return{kind:'protected',notice:n};if(unknown||n!==undefined&&(typeof n!=='object'||n===null||Array.isArray(n)))return{kind:'unknown'};return{kind:'free',notice:n}}
+async function dismiss(){const d=await chrome.storage.local.get(KEY);await chrome.storage.local.set({[KEY]:{...d[KEY],dismissedCampaign:campaign,shownAt:Date.now()}})}
+const initial=read().catch(()=>({kind:'unknown'}));globalThis.ZovoJsonMembership={KEY,LICENSE_KEYS,campaign,read,dismiss,initial};
+})();

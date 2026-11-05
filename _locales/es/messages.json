@@ -1,0 +1,216 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Formatea y valida JSON & respuestas API al instante. Resaltado de sintaxis, vista árbol, modo oscuro. 100% local y privado.",
+    "description": "Extension description for store listing"
+  },
+  "popupTitle": {
+    "message": "JSON Formatter Pro",
+    "description": "Popup header title"
+  },
+  "tabFormat": {
+    "message": "Formato",
+    "description": "Format tab label"
+  },
+  "tabTree": {
+    "message": "Árbol",
+    "description": "Tree view tab label"
+  },
+  "tabConvert": {
+    "message": "Convertir",
+    "description": "Convert tab label"
+  },
+  "tabDiff": {
+    "message": "Comparar",
+    "description": "Diff comparison tab label"
+  },
+  "buttonFormat": {
+    "message": "Formatear",
+    "description": "Format button text"
+  },
+  "buttonMinify": {
+    "message": "Minificar",
+    "description": "Minify button text"
+  },
+  "buttonCopy": {
+    "message": "Copiar",
+    "description": "Copy to clipboard button"
+  },
+  "buttonClear": {
+    "message": "Limpiar",
+    "description": "Clear input button"
+  },
+  "buttonPaste": {
+    "message": "Pegar",
+    "description": "Paste from clipboard button"
+  },
+  "buttonValidate": {
+    "message": "Validar",
+    "description": "Validate JSON button"
+  },
+  "buttonCompare": {
+    "message": "Comparar",
+    "description": "Compare two JSON objects"
+  },
+  "labelInput": {
+    "message": "Pega tu JSON aquí...",
+    "description": "Input placeholder"
+  },
+  "labelOutput": {
+    "message": "El resultado formateado aparecerá aquí",
+    "description": "Output placeholder"
+  },
+  "labelIndent": {
+    "message": "Sangría",
+    "description": "Indent size label"
+  },
+  "labelSpaces": {
+    "message": "espacios",
+    "description": "Spaces unit"
+  },
+  "statusValid": {
+    "message": "JSON válido",
+    "description": "Status when JSON is valid"
+  },
+  "statusInvalid": {
+    "message": "JSON inválido",
+    "description": "Status when JSON is invalid"
+  },
+  "statusCopied": {
+    "message": "¡Copiado!",
+    "description": "Confirmation after copy"
+  },
+  "statusCleared": {
+    "message": "Limpiado",
+    "description": "Confirmation after clear"
+  },
+  "errorParsing": {
+    "message": "Error al analizar JSON: $ERROR$",
+    "description": "JSON parse error message",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Token inesperado en la posición 42"
+      }
+    }
+  },
+  "errorLine": {
+    "message": "Error en la línea $LINE$",
+    "description": "Error location indicator",
+    "placeholders": {
+      "line": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "convertToYaml": {
+    "message": "Convertir a YAML",
+    "description": "YAML conversion option"
+  },
+  "convertToCsv": {
+    "message": "Convertir a CSV",
+    "description": "CSV conversion option"
+  },
+  "convertToXml": {
+    "message": "Convertir a XML",
+    "description": "XML conversion option"
+  },
+  "settingsTitle": {
+    "message": "Configuración",
+    "description": "Settings section title"
+  },
+  "settingsTheme": {
+    "message": "Tema",
+    "description": "Theme setting label"
+  },
+  "settingsDark": {
+    "message": "Oscuro",
+    "description": "Dark theme option"
+  },
+  "settingsLight": {
+    "message": "Claro",
+    "description": "Light theme option"
+  },
+  "settingsAuto": {
+    "message": "Automático",
+    "description": "Auto theme option"
+  },
+  "settingsFontSize": {
+    "message": "Tamaño de fuente",
+    "description": "Font size setting"
+  },
+  "upgradeTitle": {
+    "message": "Actualizar a Pro",
+    "description": "Upgrade prompt title"
+  },
+  "upgradeFeatures": {
+    "message": "Desbloquea validación de esquemas, diff avanzado y más",
+    "description": "Upgrade features description"
+  },
+  "upgradeButton": {
+    "message": "Obtener Pro",
+    "description": "Upgrade button text"
+  },
+  "shareTitle": {
+    "message": "Compartir JSON Formatter Pro",
+    "description": "Share modal title"
+  },
+  "shareBody": {
+    "message": "Ayuda a tus colegas a trabajar con JSON más eficientemente.",
+    "description": "Share modal description"
+  },
+  "shareCopy": {
+    "message": "Copiar enlace",
+    "description": "Copy referral link button"
+  },
+  "shareReward": {
+    "message": "Gana 7 días de Pro por cada amigo que instale",
+    "description": "Referral reward description"
+  },
+  "onboardingWelcome": {
+    "message": "Bienvenido a JSON Formatter Pro",
+    "description": "Onboarding welcome title"
+  },
+  "onboardingStep1": {
+    "message": "Pega o escribe cualquier JSON para formatearlo al instante",
+    "description": "Onboarding step 1"
+  },
+  "onboardingNext": {
+    "message": "Siguiente",
+    "description": "Next button in onboarding"
+  },
+  "onboardingFinish": {
+    "message": "Comenzar",
+    "description": "Finish onboarding button"
+  },
+  "contextMenuFormat": {
+    "message": "Formatear JSON seleccionado",
+    "description": "Context menu: format selection"
+  },
+  "contextMenuValidate": {
+    "message": "Validar JSON seleccionado",
+    "description": "Context menu: validate selection"
+  },
+  "contextMenuMinify": {
+    "message": "Minificar JSON seleccionado",
+    "description": "Context menu: minify selection"
+  },
+  "footerPowered": {
+    "message": "Desarrollado por Zovo",
+    "description": "Footer attribution"
+  },
+  "statsFormatCount": {
+    "message": "$COUNT$ formatos",
+    "description": "Format count display",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  }
+}

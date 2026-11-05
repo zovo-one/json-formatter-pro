@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "JSON Formatter Pro - Viewer with a Collapsible Tree",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "JSON और API रिस्पॉन्स को फॉर्मेट और वैलिडेट करें। सिंटैक्स हाइलाइटिंग, ट्री व्यू, डार्क मोड। डेटा ब्राउज़र में ही रहता है।",
+    "description": "Extension description for store listing"
+  }
+}
